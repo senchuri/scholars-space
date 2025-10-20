@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ScholarsSpace
 
-## Getting Started
+Your Gateway to Academic Excellence - A comprehensive platform for ambitious students worldwide.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Scholarship Discovery**: Find and apply to thousands of scholarships tailored to your profile
+- **Mentorship Network**: Connect with experienced mentors and peers
+- **Academic Resources**: Access curated study materials and research tools
+- **Modern UI**: Built with Next.js, Tailwind CSS, and shadcn/ui components
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui
+- **Font**: Geist Sans & Geist Mono
+
+## 🏃‍♂️ Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # App Router pages
+│   ├── scholarships/      # Scholarship pages
+│   ├── mentors/           # Mentorship pages
+│   ├── resources/         # Resource pages
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/
+│   ├── ui/                # shadcn/ui components
+│   ├── layout/            # Layout components
+│   └── sections/          # Page sections
+└── lib/                   # Utilities
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project uses shadcn/ui components with a custom color scheme:
+- Primary: Indigo (600)
+- Secondary: Blue, Green, Purple variants
+- Background: Gradient from blue-50 to indigo-100
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Available Scripts
 
-## Learn More
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy easily on Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/scholarsspace)
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built with ❤️ for students worldwide.
