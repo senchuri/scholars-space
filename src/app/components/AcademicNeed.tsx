@@ -42,33 +42,37 @@ const features = [
 
 const AcademicNeed = () => {
   return (
-    <section className="w-full py-[200px] px-[300px] bg-white font-poppins">
+    <section className="w-full py-12 sm:py-16 md:py-24 lg:py-32 xl:py-[200px] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[300px] bg-white font-poppins">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-normal text-gray-700">
+        <h2 className="text-2xl md:text-4xl font-normal text-gray-700">
           <span className="relative inline-block">
-            <span className="text-blue-600">One App</span>
-            <div className="absolute -left-2 -top-4 w-full h-auto">
-              <CircleSketchNeedText />
+            <span className="text-blue-600 ">One App</span>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center scale-100">
+                <CircleSketchNeedText />
+              </div>
             </div>
           </span>{" "}
           for all your Academic Needs
         </h2>
-        <p className="mt-4 text-base text-gray-600 font-normal">
+        <p className="mt-4 text-sm sm:text-base text-gray-600 font-normal px-4">
           Stop searching for 100s of Apps just for a Question, Now you've got
           everything at one App.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6 mt-16 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12 md:mt-16 max-w-6xl mx-auto">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="bg-gray-50 rounded-3xl p-8 flex flex-col items-center text-center"
+            className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col items-center text-center"
           >
-            <h3 className="text-base font-medium text-gray-600">
+            <h3 className="text-sm sm:text-base font-medium text-gray-600">
               {feature.title}
             </h3>
-            <p className="text-sm text-gray-400 mb-10">{feature.description}</p>
-            <div className="relative w-full max-w-xs">
+            <p className="text-xs sm:text-sm text-gray-400 mb-6 sm:mb-8 md:mb-10 px-2">
+              {feature.description}
+            </p>
+            <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-xs">
               <Image
                 src={feature.image}
                 alt={feature.alt}

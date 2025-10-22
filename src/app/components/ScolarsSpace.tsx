@@ -135,22 +135,23 @@ const ScholarsSpace = () => {
   );
 
   return (
-    <section className="w-full py-20 px-8 md:px-20 lg:px-[300px] bg-white font-poppins">
-      <div className="max-w-[1320px] mx-auto">
+    <section className="w-full py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 bg-white font-poppins">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-start mb-6">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-normal text-gray-700 mb-3">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 lg:gap-0 mb-8 sm:mb-10 lg:mb-6">
+          <div className="text-center lg:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-gray-700 mb-3">
               <span className="text-orange-500">Scholars Space</span> is for
               <span className="text-orange-500">.</span>
             </h2>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600 px-4 lg:px-0">
               Scholars Space helps students as well as teachers from Grade 10 to
               Grade 11 & 12 in their Academic Journey.
             </p>
           </div>
-          <button className="text-sm bg-blue-50 text-blue-600 py-3 px-4 rounded-full hover:bg-gray-50 transition-colors">
-            Join Scholars Space Today
+          <button className="text-sm bg-blue-50 text-blue-600 py-3 px-4 rounded-full hover:bg-gray-50 transition-colors mx-auto lg:mx-0 whitespace-nowrap">
+            <span className="hidden sm:inline">Join Scholars Space Today</span>
+            <span className="sm:hidden">Join Today</span>
           </button>
         </div>
 
@@ -161,42 +162,45 @@ const ScholarsSpace = () => {
             onValueChange={(value) =>
               setActiveTab(value as "grade11-12" | "grade10")
             }
-            className="mb-10 flex justify-center"
+            className="mb-8 sm:mb-10 flex justify-center w-full"
           >
-            <TabsList className="bg-white-50 rounded-full px-2 py-2 w-[360px] h-[56px] border border-gray-100">
+            <TabsList className="bg-white-50 rounded-full px-2 py-2 w-full max-w-[360px] sm:w-[360px] h-[48px] sm:h-[56px] border border-gray-100">
               <TabsTrigger
                 value="grade11-12"
-                className="rounded-full px-5 py-2 text-sm font-medium tracking-tight transition-all cursor-pointer text-gray-600 data-[state=active]:bg-gray-50 data-[state=active]:text-gray-600 "
+                className="rounded-full px-3 sm:px-5 py-2 text-xs sm:text-sm font-medium tracking-tight transition-all cursor-pointer text-gray-600 data-[state=active]:bg-gray-50 data-[state=active]:text-gray-600 flex-1"
               >
-                Grade 11 & 12
+                <span className="hidden sm:inline">Grade 11 & 12</span>
+                <span className="sm:hidden">Grade 11-12</span>
               </TabsTrigger>
               <TabsTrigger
                 value="grade10"
-                className="rounded-full px-5 py-2 text-sm font-medium tracking-tight transition-all cursor-pointer text-gray-600 data-[state=active]:bg-gray-50 data-[state=active]:text-gray-600"
+                className="rounded-full px-3 sm:px-5 py-2 text-xs sm:text-sm font-medium tracking-tight transition-all cursor-pointer text-gray-600 data-[state=active]:bg-gray-50 data-[state=active]:text-gray-600 flex-1"
               >
                 Grade 10
               </TabsTrigger>
             </TabsList>
           </Tabs>
           {/* Feature Cards Grid */}
-          <div className="rounded-[32px] border border-gray-100 bg-gray-50 p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="rounded-2xl sm:rounded-[32px] border border-gray-100 bg-gray-50 p-4 sm:p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6">
               {featuresByGrade[activeTab].map((feature) => {
                 const Icon = feature.icon;
                 return (
                   <div
                     key={feature.id}
-                    className="bg-white rounded-[24px] p-8 border border-gray-100"
+                    className="bg-white rounded-2xl sm:rounded-[24px] p-6 sm:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 h-full flex flex-col"
                   >
-                    <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-6">
-                      <Icon className="w-[22px] h-[22px] text-gray-600" />
+                    <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-6 flex-shrink-0">
+                      <Icon className="w-6 h-6 text-gray-600" />
                     </div>
-                    <h3 className="text-base font-semibold text-gray-600 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 text-justify">
-                      {feature.description}
-                    </p>
+                    <div className="flex-grow">
+                      <h3 className="text-base font-semibold text-gray-800 mb-3 leading-tight">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 );
               })}
