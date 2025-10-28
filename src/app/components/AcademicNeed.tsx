@@ -56,7 +56,7 @@ const AcademicNeed = () => {
           for all your Academic Needs
         </h2>
         <p className="mt-4 text-sm sm:text-base text-gray-600 font-normal px-4">
-          Stop searching for 100s of Apps just for a Question, Now you've got
+          Stop searching for 100s of Apps just for a Question, Now you&apos;ve got
           everything at one App.
         </p>
       </div>

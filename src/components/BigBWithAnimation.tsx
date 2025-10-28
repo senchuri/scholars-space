@@ -57,7 +57,7 @@ const BigBWithAnimation = ({ haveText = false, ...props }: BigBProps) => {
         animate={controls}
         // bg="transparent"
       >
-        {/* @ts-ignore */}
+        {/* @ts-expect-error - motion.svg props conflict with SVG props */}
         <motion.svg
           width={21}
           height={20}

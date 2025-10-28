@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Box, Sparkles } from "lucide-react";
+import { ArrowRight, Box } from "lucide-react";
 import BabyRobotMascot from "@/components/svg/BabyRobotMascot";
 import EdTechLogo from "@/components/svg/EdTechLogo";
 
